@@ -1,0 +1,345 @@
+<head>
+<style type="text/css">
+  @import "compass/css3";
+body {
+    margin: auto;
+}
+.seat{
+    background-color: #b1b1b7;
+    height: 26px;
+    width: 32px;
+    margin: 4px;
+    flex: 0 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+
+.seat:hover::before {
+    content: attr(data-text);
+    position: absolute;
+    background-color: black;
+    color: white !important;
+    padding: 4px;
+    border-radius: 4px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 1;
+}
+
+
+.seat.unavailable{
+    background-color: #282828;
+}
+
+.seat.selected{
+    background-color: green;
+}
+
+.seat.sold{
+    background-color: #f33131;
+}
+
+
+.seat:not(.unavailable):not(.sold):hover{
+    cursor: default;
+    transform: scale(1.2);
+}
+
+.showcase {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #777;
+    display: flex;
+    justify-content: space-between;
+}
+.showcase li {
+            display: flex;
+            margin-right: 15px;
+        }
+
+.end{
+    margin-left: 118px;
+}
+.text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: 70%;
+}
+.row{
+    display: flex;
+    flex-wrap: nowrap;
+}
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="showcase">
+            <li>
+              <div class="seat unavailable"></div>
+              <small>Unavailable</small>
+            </li>
+            <li>
+              <div class="seat"></div>
+              <small>Available</small>
+            </li>
+            <li>
+              <div class="seat sold"></div>
+              <small>Sponsored</small>
+            </li>
+          </ul>
+      <div class = "row">
+      <div style ="margin-left: 26px; font-size: small;">1</div>
+      <div style ="margin-left: 36px; font-size: small;">2</div>
+      <div style ="margin-left: 33px; font-size: small;">3</div>
+      <div style ="margin-left: 32px; font-size: small;">4</div>
+        <div style ="margin-left: 29px; font-size: small;">5</div>
+        <div style ="margin-left: 33px; font-size: small;">6</div>
+        <div style ="margin-left: 30px; font-size: small;">7</div>
+        <div style ="margin-left: 32px; font-size: small;">8</div>
+        <div style ="margin-left: 33px; font-size: small;">9</div>
+        <div style ="margin-left: 27px; font-size: small;">10</div>
+        <div style ="margin-left: 23px; font-size: small;">11</div>
+        <div style ="margin-left: 23px; font-size: small;">12</div>
+        <div style ="margin-left: 23px; font-size: small;">13</div>
+        <div style ="margin-left: 23px; font-size: small;">14</div>
+        <div style ="margin-left: 23px; font-size: small;">15</div>
+        <div style ="margin-left: 23px; font-size: small;">16</div>
+      </div>
+        <!--row k-->
+        <div class = "row">
+          <div style = "font-size: small; margin-right: 3.5px;">K</div>
+            <div class="seat info" data-text = "Row K Wheelchair 1"></div>
+            <div class="seat unavailable"></div>
+            <div class="seat" data-text = "Row K Seat 3"></div>
+            <div class="seat" data-text = "Row K Seat 4"></div>
+            <div class="seat" data-text = "Row K Seat 5"></div>
+            <div class="seat" data-text = "Row K Seat 6"></div>
+            <div class="seat" data-text = "Row K Seat 7"></div>
+            <div class="seat" data-text = "Row K Seat 8"></div>
+            <div class="seat" data-text = "Row K Seat 9"></div>
+            <div class="seat" data-text = "Row K Seat 10"></div>
+            <div class="seat" data-text = "Row K Seat 11"></div>
+            <div class="seat" data-text = "Row K Seat 12"></div>
+            <div class="seat" data-text = "Row K Seat 13"></div>
+            <div class="seat" data-text = "Row K Seat 14"></div>
+            <div class="seat" data-text = "Row K Seat 15"></div>
+            <div class="seat" data-text = "Row K Seat 16"></div>
+        </div>
+
+        <!--row j-->
+        <div class = "row">
+          <div style = "font-size: small; margin-right: 5px;">J</div>
+            <div class="seat unavailable"></div>
+            <div class="seat unavailable"></div>
+            <div class="seat" data-text = "Row J Seat 3"></div>
+            <div class="seat" data-text = "Row J Seat 4" ></div>
+            <div class="seat" data-text = "Row J Seat 5"></div>
+            <div class="seat" data-text = "Row J Seat 6"></div>
+            <div class="seat" data-text = "Row J Seat 7"></div>
+            <div class="seat" data-text = "Row J Seat 8"></div>
+            <div class="seat" data-text = "Row J Seat 9"></div>
+            <div class="seat" data-text = "Row J Seat 10"></div>
+            <div class="seat" data-text = "Row J Seat 11"></div>
+            <div class="seat" data-text = "Row J Seat 12"></div>
+            <div class="seat" data-text = "Row J Seat 13"></div>
+            <div class="seat" data-text = "Row J Seat 14"></div>
+            <div class="seat" data-text = "Row J Seat 15"></div>
+            <div class="seat" data-text = "Row J Seat 16"></div>
+        </div>
+
+        <!--row I-->
+        <div class = "row">
+          <div style = "font-size: small; margin-right: 7px;">I</div>
+            <div class="seat" data-text = "Row I Seat 1"></div>
+            <div class="seat" data-text = "Row I Seat 2"></div>
+            <div class="seat" data-text = "Row I Seat 3"></div>
+            <div class="seat" data-text = "Row I Seat 4"></div>
+            <div class="seat" data-text = "Row I Seat 5"></div>
+            <div class="seat" data-text = "Row I Seat 6"></div>
+            <div class="seat" data-text = "Row I Seat 7"></div>
+            <div class="seat" data-text = "Row I Seat 8"></div>
+            <div class="seat" data-text = "Row I Seat 9"></div>
+            <div class="seat" data-text = "Row I Seat 10"></div>
+            <div class="seat" data-text = "Row I Seat 11"></div>
+            <div class="seat" data-text = "Row I Seat 12"></div>
+            <div class="seat" data-text = "Row I Seat 13"></div>
+            <div class="seat" data-text = "Row I Seat 14"></div>
+            <div class="seat" data-text = "Row I Seat 15"></div>
+            <div class="seat" data-text = "Row I Seat 16"></div>
+        </div>
+
+        <!--row h-->
+        <div class = "row">
+          <div style = "font-size: small;">H</div>
+            <div class="seat" data-text = "Row H Seat 1"></div>
+            <div class="seat" data-text = "Row H Seat 2"></div>
+            <div class="seat" data-text = "Row H Seat 3"></div>
+            <div class="seat" data-text = "Row H Seat 4"></div>
+            <div class="seat" data-text = "Row H Seat 5"></div>
+            <div class="seat" data-text = "Row H Seat 6"></div>
+            <div class="seat" data-text = "Row H Seat 7"></div>
+            <div class="seat sold"></div>
+            <div class="seat" data-text = "Row H Seat 8"></div>
+            <div class="seat" data-text = "Row H Seat 9"></div>
+            <div class="seat" data-text = "Row H Seat 10"></div>
+            <div class="seat" data-text = "Row H Seat 11"></div>
+            <div class="seat" data-text = "Row H Seat 12"></div>
+            <div class="seat" data-text = "Row H Seat 13"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+        </div>
+
+        <!--row g-->
+        <div class = "row">
+          <div style = "font-size: small;">G</div>
+            <div class="seat" data-text = "Row G Seat 1"></div>
+            <div class="seat" data-text = "Row G Seat 2"></div>
+            <div class="seat" data-text = "Row G Seat 3"></div>
+            <div class="seat" data-text = "Row G Seat 4"></div>
+            <div class="seat" data-text = "Row G Seat 5"></div>
+            <div class="seat" data-text = "Row G Seat 6"></div>
+            <div class="seat" data-text = "Row G Seat 7"></div>
+            <div class="seat" data-text = "Row G Seat 8"></div>
+            <div class="seat" data-text = "Row G Seat 9"></div>
+            <div class="seat" data-text = "Row G Seat 10"></div>
+            <div class="seat" data-text = "Row G Seat 11"></div>
+            <div class="seat" data-text = "Row G Seat 12"></div>
+            <div class="seat" data-text = "Row G Seat 13"></div>
+            <div class="seat" data-text = "Row G Seat 14"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+        </div>
+
+        <!--row f-->
+        <div class = "row">
+          <div style = "font-size: small;">F</div>
+            <div class="seat sold"></div>
+            <div class="seat" data-text = "Row F Seat 2"></div>
+            <div class="seat" data-text = "Row F Seat 3"></div>
+            <div class="seat" data-text = "Row F Seat 4"></div>
+            <div class="seat" data-text = "Row F Seat 5"></div>
+            <div class="seat" data-text = "Row F Seat 6"></div>
+            <div class="seat" data-text = "Row F Seat 7"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+            <div class="seat" data-text = "Row F Seat 10"></div>
+            <div class="seat sold"></div>
+            <div class="seat" data-text = "Row F Seat 12"></div>
+            <div class="seat" data-text = "Row F Seat 13"></div>
+            <div class="seat" data-text = "Row F Seat 14"></div>
+            <div class="seat" data-text = "Row F Seat 15"></div>
+            <div class="seat sold"></div>
+        </div>
+
+        <!--row e-->
+        <div class = "row">
+          <div style = "font-size: small;">E</div>
+            <div class="seat" data-text = "Row E Seat 1"></div>
+            <div class="seat" data-text = "Row E Seat 2"></div>
+            <div class="seat" data-text = "Row E Seat 3"></div>
+            <div class="seat" data-text = "Row E Seat 4"></div>
+            <div class="seat" data-text = "Row E Seat 5"></div>
+            <div class="seat" data-text = "Row E Seat 6"></div>
+            <div class="seat" data-text = "Row E Seat 7"></div>
+            <div class="seat" data-text = "Row E Seat 8"></div>
+            <div class="seat" data-text = "Row E Seat 9"></div>
+            <div class="seat" data-text = "Row E Seat 10"></div>
+            <div class="seat" data-text = "Row E Seat 11"></div>
+            <div class="seat" data-text = "Row E Seat 12"></div>
+            <div class="seat" data-text = "Row E Seat 13"></div>
+            <div class="seat" data-text = "Row E Seat 14"></div>
+            <div class="seat sold"></div>
+            <div class="seat" data-text = "Row E Seat 16"></div>
+        </div>
+
+        <!--row d-->
+        <div class = "row">
+          <div style = "font-size: small;">D</div>
+            <div class="seat" data-text = "Row D Seat 1"></div>
+            <div class="seat" data-text = "Row D Seat 2"></div>
+            <div class="seat" data-text = "Row D Seat 3"></div>
+            <div class="seat" data-text = "Row D Seat 4"></div>
+            <div class="seat" data-text = "Row D Seat 5"></div>
+            <div class="seat" data-text = "Row D Seat 6"></div>
+            <div class="seat" data-text = "Row D Seat 7"></div>
+            <div class="seat" data-text = "Row D Seat 8"></div>
+            <div class="seat" data-text = "Row D Seat 9"></div>
+            <div class="seat" data-text = "Row D Seat 10"></div>
+            <div class="seat" data-text = "Row D Seat 11"></div>
+            <div class="seat" data-text = "Row D Seat 12"></div>
+            <div class="seat" data-text = "Row D Seat 13"></div>
+            <div class="seat" data-text = "Row D Seat 14"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+        </div>
+
+        <!--row c-->
+        <div class = "row">
+          <div style = "font-size: small;">C</div>
+            <div class="seat" data-text = "Row C Seat 1"></div>
+            <div class="seat" data-text = "Row C Seat 2"></div>
+            <div class="seat" data-text = "Row C Seat 3"></div>
+            <div class="seat" data-text = "Row C Seat 4"></div>
+            <div class="seat" data-text = "Row C Seat 5"></div>
+            <div class="seat" data-text = "Row C Seat 6"></div>
+            <div class="seat" data-text = "Row C Seat 7"></div>
+            <div class="seat" data-text = "Row C Seat 8"></div>
+            <div class="seat" data-text = "Row C Seat 9"></div>
+            <div class="seat" data-text = "Row C Seat 10"></div>
+            <div class="seat" data-text = "Row C Seat 11"></div>
+            <div class="seat" data-text = "Row C Seat 12"></div>
+            <div class="seat" data-text = "Row C Seat 13"></div>
+            <div class="seat" data-text = "Row C Seat 14"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+        </div>
+
+        <!--row b-->
+          <div class = "row">
+          <div style = "font-size: small;">B</div>
+        <div class = "row end">
+            <div class="seat" data-text = "Row B Seat 1"></div>
+            <div class="seat" data-text = "Row B Seat 2"></div>
+            <div class="seat" data-text = "Row B Seat 3"></div>
+            <div class="seat" data-text = "Row B Seat 4"></div>
+            <div class="seat" data-text = "Row B Seat 5"></div>
+            <div class="seat" data-text = "Row B Seat 6"></div>
+            <div class="seat" data-text = "Row B Seat 7"></div>
+            <div class="seat" data-text = "Row B Seat 8"></div>
+            <div class="seat" data-text = "Row B Seat 9"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+          </div>
+        </div>
+
+        <!-- row a-->
+              <div class = "row">
+          <div style = "font-size: small;">A</div>
+        <div class = "row end">
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+            <div class="seat" data-text = "Row A Seat 1"></div>
+            <div class="seat" data-text = "Row A Seat 2"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+            <div class="seat" data-text = "Row A Seat 3"></div>
+            <div class="seat" data-text = "Row A Seat 4"></div>
+            <div class="seat" data-text = "Row A Seat 5"></div>
+            <div class="seat" data-text = "Row A Seat 6"></div>
+            <div class="seat" data-text = "Row A Seat 7"></div>
+        </div>
+              </div>
+
+
+
+    </div>
+
+</body>
